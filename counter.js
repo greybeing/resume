@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-const funcApi = 'https://countfunc.azurewebsites.net';
+const funcApi = 'https://countfunc.azurewebsites.net/api/id/1';
 
 
 const getVisitCount = () => {
-    let count = 30;
+    let count = 0;
     fetch(funcApi)
     .then(response => {
         return response.json()
