@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 
-const funcApi = 'https://countfunc.azurewebsites.net/api/id/1';
+const funcApi = 'https://resumevisitcounter.azurewebsites.net/api/counterfunction?code=jgAeSzqhStpwaf6yyAVZ24FD6N/ZanUYVDuf4p23huABl9ftAUnHQg==';
 
 
 const getVisitCount = () => {
