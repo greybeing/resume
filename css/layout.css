@@ -299,7 +299,7 @@ ul#nav li.current a { color: #F06000; }
 
 #certifications {
    background: #fff;
-   padding-top: 90px;
+   padding-top: 50px;
    padding-bottom: 72px;
    overflow: hidden;
 }
@@ -865,7 +865,7 @@ call-to-action .button {
 
 #contact {
    background: #191919;
-   padding-top: 96px;
+   padding-top: 100px;
    padding-bottom: 102px;
    color: #636363;
 }
@@ -881,16 +881,25 @@ call-to-action .button {
    color: #EBEEEE;
    margin-bottom: 6px;
 }
-#contact h1 span { display: none; }
+#contact h1 span { 
+    position: relative;
+    bottom: 30px;
+    left: 150px;
+    display: flex;
+   flex-direction: row;
+   font-size: larger;
+   font-family: 'Franklin Gothic Medium';
+    }
+
 #contact h1:before {
    font-family: 'FontAwesome';
    content: "\f0e0";
 	padding-right: 10px;
 	font-size: 72px;
-   line-height: 72px;
+   line-height: 143px;
    text-align: left;
    float: left;
-   color: #ebeeee;
+   color: #13b1b1;
 }
 
 #contact h4 {
@@ -901,6 +910,7 @@ call-to-action .button {
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
    padding-right: 3%;
+   line-height: 90px;
 }
 #contact .header-col { padding-top: 6px; }
 
@@ -909,11 +919,11 @@ call-to-action .button {
 #contact form { margin-bottom: 30px; }
 #contact label {
    font: 15px/24px 'opensans-bold', sans-serif;
-   margin: 12px 0;
+   margin: 12px 0px;
    color: #EBEEEE;
 	display: inline-block;
 	float: left;
-   width: 26%;
+   width: 16%;
 }
 #contact input,
 #contact textarea,
