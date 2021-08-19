@@ -32,6 +32,7 @@ contactForm.addEventListener('submit', (e) => {
 
   xhr.send(JSON.stringify(mail));
 
+    
     console.log(mail)
 })
 
