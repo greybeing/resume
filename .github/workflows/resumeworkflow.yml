@@ -18,13 +18,13 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
+        azcliversion: 2.36
         inlineScript: |
             az storage blob upload-batch --account-name resumewebsitepage -d '$web' -s .
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
-        azcliversion: 2.0.72
+        azcliversion: 2.36
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "portfoliowebsite" --name "greybeing" --resource-group "Resume"
 
