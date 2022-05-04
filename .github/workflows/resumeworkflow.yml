@@ -20,7 +20,7 @@ jobs:
       with:
         azcliversion: 2.35.0
         inlineScript: |
-            az account set
+            az account set --subscription sandnox
             az storage blob upload-batch --account-name resumewebsitepage -d '$web' -s .
            
     - name: Purge CDN endpoint
