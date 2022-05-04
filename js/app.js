@@ -15,7 +15,7 @@ contactForm.addEventListener('submit', (e) => {
   }
 
   let xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://myresume-api.herokuapp.com/sendMail');
+  xhr.open('POST', 'http://127.0.0.1:5001/SendMail');
   xhr.setRequestHeader('content-type','application/json');
   xhr.onload = function() {
       if(xhr.responseText == 'success') {
