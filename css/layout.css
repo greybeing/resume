@@ -296,6 +296,23 @@ ul#nav li.current a { color: #F06000; }
    font: 15px/24px 'opensans-regular', sans-serif;
    margin-top: 6px;
 }
+
+.skills-intro { 
+   margin-bottom: 24px;
+   margin-top: 50px;
+   position: relative;
+   left:20%;
+  
+}
+.skills {
+   position: relative;
+   left:25%;
+}
+.skills-p {
+   position: relative;
+   left:27%;
+}
+
 /* 
   work section */
   
@@ -317,13 +334,23 @@ ul#nav li.current a { color: #F06000; }
    padding-bottom: 6px;
 }
 
-.work h3 {
-   font: 25px/30px 'opensans-bold', sans-serif;
+.work-intro {
+   margin-bottom: 24px;
+   margin-top: 50px;
+   position: relative;
+   left:20%;
+}
+
+.work-p {
+   position: relative;
+   left:27%;
 }
 
 
-.work .header-col { padding-top: 9px; }
-.work .main-col { padding-right: 10%; }
+
+
+
+/**End of work section **/
 
 
 #certifications {
@@ -375,21 +402,7 @@ ul#nav li.current a { color: #F06000; }
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
-.skills-intro { 
-   margin-bottom: 24px;
-   margin-top: 50px;
-   position: relative;
-   left:20%;
-  
-}
-.skills {
-   position: relative;
-   left:25%;
-}
-.skills-p {
-   position: relative;
-   left:27%;
-}
+
 .bars {
 	width: 95%;
 	float: left;
