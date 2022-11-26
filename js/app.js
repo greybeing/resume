@@ -1,38 +1,27 @@
-const contactForm = document.querySelector('#contactForm');
+function sendMail() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+       event.preventDefault();
 
-let contactName = document.getElementById('contactName');
-let email = document.getElementById('contactEmail');
-let subject = document.getElementById('contactSubject');
-let message = document.getElementById('contactMessage');
+       emailjs.sendForm('service_g291p1l', 'template_1snrw1d', '#contact-form')
+          .then(function() {
+            console.log('SUCCESS!');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let mail = {
-      contactName: contactName.value,
-      email: email.value,
-      subject: subject.value,
-      message: message.value
-  }
+            let success = document.getElementById('sendButton');
 
-  let xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://127.0.0.1:5001/SendMail');
-  xhr.setRequestHeader('content-type','application/json');
-  xhr.onload = function() {
-      if(xhr.responseText == 'success') {
-          console.log(xhr.responseText);
-          alert('Email successfully sent');
-          contactName.value = '';
-          email.value = '';
-          subject.value = '';
-          message.value = '';
-      }else{
-          alert('oops! something went wrong')
-      }
-  }
 
-  xhr.send(JSON.stringify(mail));
+            let contactForm = document.getElementById('contact-form');
 
-    
-    console.log(mail)
-})
+            contactForm.reset()
 
+            success.innerHTML = "Message Sent";
+
+            success.style.backgroundColor = "green";
+
+            setInterval(() => window.location.reload(true), 3000);
+        },  function(error) {
+             console.log('FAILED...', error);
+           });
+       });
+    }
+
+  

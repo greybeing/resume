@@ -3,7 +3,13 @@
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('y0X0H1xY7wZIpEn7I');
+      })();
+  </script>
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8">
@@ -98,9 +104,9 @@
 
             <h2><a class="smoothscroll" href="#about">About Me</a></h2>
 
-            <p> I like to see myself as a budding Programming Rockstar, for now i am a <span>Certified Cloud/DevOps Engineer</span> and
-               <span>Backend Developer</span> looking to help <span>Companies</span>/<span>Businesses</span> of all sizes
-               create efficient <span>solutions</span> to their business <span>problems/needs.</span></p>
+            <p> I like to see myself as a budding Programming Rockstar, for now i am a <span>Certified Cloud Engineer</span> and
+               <span>Backend Developer</span> looking to help <span>Companies</span> and <span>Businesses</span> of all sizes
+               create efficient <span>solutions</span> to their business <span>problems or needs.</span></p>
 
             <div class="row">
 
@@ -131,9 +137,9 @@
          <div class="three columns header-col">
             <h1><span><a class="smoothscroll" href="#work"></a>Work</span></h1>
          </div>
-            <h1 class='work-intro'>Cloud/DevOps Engineer(Intern) @ SoftMesh</h1>
+            <h1 class='work-intro'>Cloud Engineer(Intern) @ SoftMesh</h1>
                <p class='work-p'>Sept 2021 - Dec 2021</p> 
-            <h1 class='work-intro'>Cloud/DevOps Engineer @ SoftMesh</h1>
+            <h1 class='work-intro'>Cloud Engineer @ SoftMesh</h1>
                <p class='work-p'>January 2022 - Present</p> 
             </div>
          <hr />
@@ -197,6 +203,9 @@
                
             <h1 class='skills-intro'>Microsoft Azure Administrator Associate</h1> 
               <p class='skills-p'>June 2021</p>  
+
+            <h1 class='skills-intro'>AWS Certified Cloud Practioner</h1> 
+              <p class='skills-p'>August 2022</p>  
        </section>
        <!------Certification section end-->
 
@@ -225,32 +234,31 @@
          <div class="eight columns">
 
             <!-- form -->
-            <form action="sendMail" method="post" id="contactForm" name="contactForm" enctype = "multipart/form-data">
+            <form id="contact-form">
             <fieldset>
 
                <div>
-                  
                   <label for="contactName">Name <span class="required">*</span></label>
-                  <input type="text" value="" size="35" id="contactName" name="contactName">
+                  <input type="text" value="" size="35" id="contactName" name="from_name">
                </div>
 
                <div>
                   <label for="contactEmail">Email <span class="required">*</span></label>
-                  <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                  <input type="text" value="" size="35" id="contactEmail" name="user_email">
                </div>
 
                <div>
                   <label for="contactSubject">Subject</label>
-                  <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                  <input type="text" value="" size="35" id="contactSubject" name="subject">
                </div>
 
                <div>
                   <label for="contactMessage">Message <span class="required">*</span></label>
-                  <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                  <textarea cols="50" rows="15" id="contactMessage" name="message"></textarea>
                </div>
 
                <div>
-                  <button type="submit" class="submit" value="Submit">Submit</button>
+                  <button id="sendButton" onclick="sendMail()" type="submit" class="submit" value="send">Send</button>
                   <span id="image-loader">
                      <img alt="request loading" src="images/loader.gif">
                   </span>
@@ -259,14 +267,7 @@
             </fieldset>
             </form> <!-- Form End -->
 
-            <!-- contact-warning -->
-            <div id="message-warning"> Error boy</div>
-            <!-- contact-success -->
-            <div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-            </div>
-
-         </div>
+          
    </div>
 
 </section> <!-- Contact Section End-->
@@ -363,15 +364,6 @@
 
    <!-- Java Script
    ================================================== -->
-
-    <!-- Google Dialog Flow -->
-    <df-messenger
-    intent="WELCOME"
-    chat-title="greybeing-bot"
-    agent-id="903f3a6c-b032-4e45-8a9b-57c2c17b6f43"
-    language-code="en"
-    ></df-messenger>
-   
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
