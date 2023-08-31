@@ -25,7 +25,7 @@
 
  
 async function fetchVisitorCount() {
-    const response = await fetch('http://localhost:9100/visitors/');
+    const response = await fetch('https://api.oluwagbenga.com/visitors/');
     const data = await response.json();
     document.getElementById('counter').innerText = data.count;
 }
