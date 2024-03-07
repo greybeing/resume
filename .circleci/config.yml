@@ -7,19 +7,19 @@ jobs:
             - image: cimg/base:2021.04
         steps:
             - checkout
-            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./dev-resume.sh"
+            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./dev-resume_deploy.sh"
     staging:
         docker:
             - image: cimg/base:2021.04
         steps:
             - checkout
-            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./staging-resume.sh"
+            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./staging-resume_deploy.sh"
     prod:
         docker:
             - image: cimg/base:2021.04
         steps:
             - checkout
-            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./prod-resume.sh"
+            - run: ssh -oStrictHostKeyChecking=no -v $USER@$IP "./prod-resume_deploy.sh"
 
 # Orchestrate our job run sequence
 workflows:
