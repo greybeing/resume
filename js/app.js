@@ -1,3 +1,4 @@
+// fucntion to send email using emailjs
 function sendMail() {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
        event.preventDefault();
